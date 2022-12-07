@@ -284,7 +284,7 @@ class FactoryTest extends TestCase
 
         $deployment = $this->subject->getDeployment('deploy', null, false);
 
-        $this->logger->pushHandler(new StreamHandler(getenv('HOME') . '/.surf/workspace/logs/deploy.log'))->shouldBeCalledOnce();
+        $this->logger->pushHandler(new StreamHandler(getenv('HOME') . '/.surf/workspace/logs/deploy.log'))->shouldBeCalledOne();
 
         self::assertFalse($deployment->getForceRun());
         self::assertTrue($deployment->isInitialized());
