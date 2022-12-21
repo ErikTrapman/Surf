@@ -44,6 +44,7 @@ class InstallTask extends AbstractComposerTask
         '--no-interaction',
         '--no-dev',
         '--no-progress',
-        '--classmap-authoritative'
+        '--classmap-authoritative',
+        '--no-scripts'
     ];
 }
